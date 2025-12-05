@@ -20,8 +20,8 @@ public class AskController {
     public BaseResponse<AskResponseDto> ask(
             @RequestHeader(name ="userId") String userId,
             @RequestBody AskQuestionCommand askQuestionCommand) throws Exception {
-        // do validations about the input data
         // for example, the question in the command is not empty
+        askQuestionCommand.validate();
         AskResponseDto dto = askService.ask(askQuestionCommand);
         BaseResponse<AskResponseDto> result = BaseResponse.<AskResponseDto>builder()
                 .code(1000) // success

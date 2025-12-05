@@ -1,0 +1,44 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# IntelliJ IDEA / JetBrains
+.idea/
+*.iml
+*.iws
+out/
+
+# VS Code
+.vscode/
+
+# Maven
+.mvn/
+.mvn/wrapper/maven-wrapper.jar
+mvnw
+mvnw.cmd
+target/
+
+# Gradle (removed after migration to Maven)
+.gradle/
+build/
+# No un-ignores; entire Gradle wrapper directory stays ignored/absent
+
+# Logs
+logs/
+*.log
+
+# Spring Boot
+spring.log
+
+# Local environment
+.env
+*.local
+
+# Coverage / reports
+coverage/
+*.exec
+jacoco.exec
+
+# Misc
+*.swp
+*.swo

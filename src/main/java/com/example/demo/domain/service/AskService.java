@@ -18,7 +18,7 @@ public class AskService {
     private final AiAdapterFactory aiAdapterFactory;
 
     public AskResponseDto ask(AskQuestionCommand command) {
-        List<AiResponseDto> responses = new ArrayList<>();
+        ArrayList<AiResponseDto> responses = new ArrayList<>();
 
         for (AiAdapter adapter : aiAdapterFactory.getAllAdapters()) {
             String answer;
@@ -34,6 +34,7 @@ public class AskService {
                             .answer(answer)
                             .build()
             );
+
         }
 
         return AskResponseDto.builder()

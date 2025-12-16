@@ -18,7 +18,7 @@ public class AskController {
 
     @PostMapping("/ask")
     public BaseResponse<AskResponseDto> ask(
-            @RequestHeader(name ="userId") String userId,
+            @RequestHeader(name ="userId",required = false) String userId,
             @RequestBody AskQuestionCommand askQuestionCommand) throws Exception {
         // for example, the question in the command is not empty
         askQuestionCommand.validate();
